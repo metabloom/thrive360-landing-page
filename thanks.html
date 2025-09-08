@@ -3,44 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thank You - THRIVE 360</title>
+  <title>Thank You — THRIVE 360</title>
   <style>
+    :root {
+      --bg: #0e0f13;
+      --card: #141720;
+      --muted: #9da7bf;
+      --text: #f3f5f7;
+      --accent: #86efac;
+      --accent-2: #38bdf8;
+      --ring: #a78bfa;
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      background: #0e0f13;
-      color: #f3f5f7;
+      margin: 0;
+      font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #0b0c10, #121420 35%, #0e0f13);
+      color: var(--text);
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      text-align: center;
+      padding: 24px;
     }
     .box {
-      background: #141720;
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      background: var(--card);
+      padding: 48px 36px;
+      border-radius: 22px;
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,.55);
+      border: 1px solid #20263a;
     }
-    h1 { color: #86efac; }
-    p { color: #9da7bf; }
+    h1 {
+      font-size: clamp(28px, 6vw, 40px);
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+    p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.5;
+    }
     a {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #86efac;
+      margin-top: 24px;
+      padding: 14px 24px;
+      background: linear-gradient(135deg, var(--accent), #3dd2a1 60%);
       color: #0d1b14;
+      font-weight: 700;
       text-decoration: none;
-      font-weight: bold;
-      border-radius: 10px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(61,210,161,.25);
+      transition: transform 0.2s ease;
+    }
+    a:hover {
+      transform: translateY(-2px);
     }
   </style>
 </head>
 <body>
   <div class="box">
     <h1>🎉 You’re in!</h1>
-    <p>Thanks for joining the THRIVE 360 waitlist.<br>
-    Keep an eye on your inbox — exciting updates are on the way!</p>
-    <a href="https://metabloom.github.io/thrive360-landing-page/">Back to Home</a>
+    <p>
+      Thanks for joining the <strong>THRIVE 360</strong> waitlist.<br>
+      You’ll be the first to hear when we launch and get early-bird access.
+    </p>
+    <a href="https://metabloom.github.io/thrive360-landing-page/">← Back to Home</a>
   </div>
 </body>
 </html>
