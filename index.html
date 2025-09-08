@@ -60,20 +60,25 @@
     .card p{margin:0;color:var(--muted)}
 
     /* HERO image sizing */
-    .hero-img{
-      width:100%;
-      max-width:720px;
-      height:auto;
-      max-height:300px;      /* desktop/tablet cap */
-      object-fit:contain;    /* no crop */
-      border-radius:16px;border:1px solid #2a2f40;
-      display:block;margin:18px auto;
-    }
-    @media (max-width:600px){
-      .hero-img{ max-height:180px; } /* phone cap */
-    }
+   .hero-img {
+  width: 100%;
+  max-width: 760px;     /* was 720px → a little wider */
+  height: auto;
+  max-height: 340px;    /* was 300px → slightly taller */
+  object-fit: contain;
+  border-radius: 16px;
+  border: 1px solid #2a2f40;
+  display: block;
+  margin: 22px auto;    /* was 18px → a bit more breathing room */
+}
 
-    footer{margin:36px 0 12px;text-align:center;font-size:14px;color:var(--muted)}
+/* On phones, allow a bit more too */
+@media (max-width: 600px) {
+  .hero-img {
+    max-height: 200px;  /* was 180px → just a little taller */
+  }
+}
+
   </style>
 </head>
 <body>
