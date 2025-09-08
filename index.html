@@ -34,10 +34,20 @@
         <p class="lead">Because thriving is about more than food — it’s about living fully.</p>
 
         <!-- Simple “mailto” signup for now; replace later with your email service -->
-        <form action="mailto:your@email.com?subject=THRIVE%20360%20Waitlist" method="GET">
-          <input type="email" name="email" placeholder="Enter your email" required />
-          <button type="submit">Join the Waitlist</button>
-        </form>
+        <form action=https://formspree.io/f/xdklyjqa method="POST">
+  <input type="email" name="email" placeholder="Enter your email" required />
+  <button type="submit">Join the Waitlist</button>
+
+  <!-- optional helpers -->
+  <input type="hidden" name="_subject" value="THRIVE 360 Waitlist">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://metabloom.github.io/thrive360-landing-page/thanks.html">
+</form>
+
+<p style="color:#64748b;font-size:12px;margin-top:8px">
+  We’ll email occasional updates. No spam. Unsubscribe anytime.
+</p>
+
 
         <div class="grid">
           <div class="card"><h3>Mind & Habits</h3><p>Build small, sustainable routines that compound into big change.</p></div>
