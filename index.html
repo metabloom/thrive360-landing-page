@@ -62,16 +62,23 @@
   .card h3{margin:0 0 6px}
   .card p{margin:0;color:var(--muted)}
 
-  .hero-img{
-  width:100%;
-  max-width:700px;   /* smaller max width */
-  max-height:320px;  /* limit vertical size */
-  object-fit:cover;  /* crops if taller */
-  border-radius:16px;
-  border:1px solid #2a2f40;
-  display:block;
-  margin:18px auto;  /* centers image */
+  .hero-img {
+  width: 100%;
+  max-width: 720px;       /* keeps it smaller on desktop */
+  height: auto;           /* keeps proportions */
+  max-height: 300px;      /* stops it from being too tall */
+  object-fit: contain;    /* shows whole image, no crop */
+  border-radius: 16px;
+  border: 1px solid #2a2f40;
+  display: block;
+  margin: 18px auto;
 }
+
+/* On small screens (phones), shrink it even more */
+@media (max-width: 600px) {
+  .hero-img {
+    max-height: 180px;    /* smaller on phones */
+  }
 
 
 </style>
