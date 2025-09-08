@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -10,7 +9,7 @@
   <meta name="description" content="Beginner-friendly, emotionally supportive guide to food, habits, and sustainable fitness by a certified coach. Join the waitlist.">
   <link rel="canonical" href="https://metabloom.github.io/thrive360-landing-page/">
 
-  <!-- Favicon -->
+  <!-- Favicon (optional if you added favicon.png) -->
   <link rel="icon" type="image/png" href="https://metabloom.github.io/thrive360-landing-page/favicon.png">
 
   <!-- Social Preview -->
@@ -19,112 +18,104 @@
   <meta property="og:description" content="A warm, practical system for real life: cravings, busy days, big goals.">
   <meta property="og:url" content="https://metabloom.github.io/thrive360-landing-page/">
   <meta property="og:image" content="https://metabloom.github.io/thrive360-landing-page/cover.png">
-
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="THRIVE 360 — Build habits, not guilt.">
   <meta name="twitter:description" content="Beginner-friendly, emotionally supportive guide to food, habits, and sustainable fitness.">
   <meta name="twitter:image" content="https://metabloom.github.io/thrive360-landing-page/cover.png">
 
-  <!-- Page styles -->
+  <!-- Styles -->
   <style>
-  :root{
-    --bg:#0e0f13; --card:#141720; --muted:#8e95a9; --text:#f3f5f7;
-    --accent:#86efac; --accent-2:#38bdf8; --ring:#a78bfa;
-  }
+    :root{
+      --bg:#0e0f13; --card:#141720; --muted:#8e95a9; --text:#f3f5f7;
+      --accent:#86efac; --accent-2:#38bdf8; --ring:#a78bfa;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:linear-gradient(180deg,#0b0c10,#121420 35%,#0e0f13);
+      color:var(--text);
+      line-height:1.6;
+    }
+    .wrap{max-width:900px;margin:0 auto;padding:32px 20px}
+    h1{font-size:clamp(32px,6vw,48px);margin:0 0 8px}
+    .lead{font-size:18px;color:var(--muted);margin:0 0 20px}
 
-  *{box-sizing:border-box}
-  body{
-    margin:0;
-    font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-    background:linear-gradient(180deg,#0b0c10,#121420 35%,#0e0f13);
-    color:var(--text); line-height:1.6;
-  }
+    form{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 10px}
+    input[type="email"]{
+      flex:1;min-width:220px;padding:12px 14px;border-radius:12px;
+      border:1px solid #2a2f40;background:#0c0e15;color:var(--text);outline:none
+    }
+    input[type="email"]:focus{border-color:var(--ring);box-shadow:0 0 0 4px rgba(167,139,250,.25)}
+    button{
+      padding:12px 16px;border-radius:12px;border:0;cursor:pointer;
+      background:linear-gradient(135deg,var(--accent),#3dd2a1 60%);
+      color:#0b1611;font-weight:800;box-shadow:0 10px 30px rgba(61,210,161,.25)
+    }
+    .hint{color:var(--muted);font-size:12px;margin-top:6px}
 
-  .wrap{max-width:900px;margin:0 auto;padding:32px 20px}
-  h1{font-size:clamp(32px,6vw,48px);margin:0 0 8px}
-  .lead{font-size:18px;color:var(--muted);margin:0 0 20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:26px 0}
+    .card{background:var(--card);border:1px solid #2a2f40;border-radius:16px;padding:16px}
+    .card h3{margin:0 0 6px}
+    .card p{margin:0;color:var(--muted)}
 
-  form{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 10px}
-  input[type="email"]{
-    flex:1; min-width:220px;
-    padding:12px 14px;border-radius:12px;border:1px solid #2a2f40;
-    background:#0c0e15;color:var(--text);outline:none;
-  }
-  input[type="email"]:focus{border-color:var(--ring);box-shadow:0 0 0 4px rgba(167,139,250,.25)}
-  button{
-    padding:12px 16px;border-radius:12px;border:0;cursor:pointer;
-    background:linear-gradient(135deg,var(--accent),#3dd2a1 60%);
-    color:#0b1611;font-weight:800;box-shadow:0 10px 30px rgba(61,210,161,.25)
-  }
+    /* HERO image sizing */
+    .hero-img{
+      width:100%;
+      max-width:720px;
+      height:auto;
+      max-height:300px;      /* desktop/tablet cap */
+      object-fit:contain;    /* no crop */
+      border-radius:16px;border:1px solid #2a2f40;
+      display:block;margin:18px auto;
+    }
+    @media (max-width:600px){
+      .hero-img{ max-height:180px; } /* phone cap */
+    }
 
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:26px 0}
-  .card{background:var(--card);border:1px solid #2a2f40;border-radius:16px;padding:16px}
-  .card h3{margin:0 0 6px}
-  .card p{margin:0;color:var(--muted)}
-
- .hero-img {
-  width: 100%;
-  max-width: 720px;   /* keeps it smaller on large screens */
-  height: auto;
-  max-height: 300px;  /* desktop/tablet cap */
-  object-fit: contain;
-  border-radius: 16px;
-  border: 1px solid #2a2f40;
-  display: block;
-  margin: 18px auto;
-}
-
-/* On phones, shrink even more */
-@media (max-width: 600px) {
-  .hero-img {
-    max-height: 180px;  /* smaller hero on phones */
-  }
-}
-
-</style>
-
-
+    footer{margin:36px 0 12px;text-align:center;font-size:14px;color:var(--muted)}
+  </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="hero">
-      <div>
-        <h1>THRIVE 360</h1>
-        <p class="lead">Because thriving is about more than food — it’s about living fully.</p>
+    <h1>THRIVE 360</h1>
+    <p class="lead">Because thriving is about more than food — it’s about living fully.</p>
 
-     <form action="https://formspree.io/f/xdklyjqa" method="POST">
-  <input type="email" name="email" placeholder="Enter your email" required />
-  <button type="submit">Join the Waitlist</button>
+    <!-- Signup form (Formspree) -->
+    <form action="https://formspree.io/f/xdklyjqa" method="POST">
+      <label for="email" class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Email address</label>
+      <input id="email" type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit">Join the Waitlist</button>
 
-  <!-- optional helpers -->
-  <input type="hidden" name="_subject" value="THRIVE 360 Waitlist">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://metabloom.github.io/thrive360-landing-page/thanks.html">
-</form>
+      <!-- helpers -->
+      <input type="hidden" name="_subject" value="THRIVE 360 Waitlist">
+      <input type="hidden" name="_captcha" value="false">
+      <!-- keeping Formspree Merci page as per your choice -->
+    </form>
+    <div class="hint">We’ll email occasional updates. No spam. Unsubscribe anytime.</div>
 
-
-<p style="color:#64748b;font-size:12px;margin-top:8px">
-  We’ll email occasional updates. No spam. Unsubscribe anytime.
-</p>
-
-
-        <div class="grid">
-          <div class="card"><h3>Mind & Habits</h3><p>Build small, sustainable routines that compound into big change.</p></div>
-          <div class="card"><h3>Balanced Nutrition</h3><p>Simple, flexible frameworks to eat well without obsession.</p></div>
-          <div class="card"><h3>Real-Life Friendly</h3><p>Tools that work with busy schedules, cravings, and social life.</p></div>
-        </div>
+    <!-- Feature cards -->
+    <div class="grid">
+      <div class="card">
+        <h3>Mind & Habits</h3>
+        <p>Build small, sustainable routines that compound into big change.</p>
       </div>
-
-      <!-- Match your file name EXACTLY. You uploaded “Hero image.png” -->
-    <!-- HERO IMAGE -->
-<img src="Hero image.png" alt="THRIVE 360 hero"
-     class="hero-img"
-     style="max-height:180px;width:100%;height:auto;object-fit:contain;display:block;margin:18px auto;border-radius:16px;border:1px solid #2a2f40;">
-
+      <div class="card">
+        <h3>Balanced Nutrition</h3>
+        <p>Simple, flexible frameworks to eat well without obsession.</p>
+      </div>
+      <div class="card">
+        <h3>Real-Life Friendly</h3>
+        <p>Tools that work with busy schedules, cravings, and social life.</p>
+      </div>
     </div>
 
-    <footer>© <span id="y"></span> THRIVE 360 • <a href="#">Instagram</a></footer>
+    <!-- HERO IMAGE (uses the file that exists: cover.png) -->
+    <img src="./cover.png" alt="THRIVE 360 hero" class="hero-img"
+         style="max-height:180px;width:100%;height:auto;object-fit:contain;display:block;margin:18px auto;border-radius:16px;border:1px solid #2a2f40;">
+
+    <footer>© 2025 THRIVE 360 • <a href="#" style="color:#9db2ff;text-decoration:none">Instagram</a></footer>
   </div>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
+
