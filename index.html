@@ -62,24 +62,24 @@
   .card h3{margin:0 0 6px}
   .card p{margin:0;color:var(--muted)}
 
-  .hero-img {
+ .hero-img {
   width: 100%;
-  max-width: 720px;       /* keeps it smaller on desktop */
-  height: auto;           /* keeps proportions */
-  max-height: 300px;      /* stops it from being too tall */
-  object-fit: contain;    /* shows whole image, no crop */
+  max-width: 720px;   /* keeps it smaller on large screens */
+  height: auto;
+  max-height: 300px;  /* desktop/tablet cap */
+  object-fit: contain;
   border-radius: 16px;
   border: 1px solid #2a2f40;
   display: block;
   margin: 18px auto;
 }
 
-/* On small screens (phones), shrink it even more */
+/* On phones, shrink even more */
 @media (max-width: 600px) {
   .hero-img {
-    max-height: 180px;    /* smaller on phones */
+    max-height: 180px;  /* smaller hero on phones */
   }
-
+}
 
 </style>
 
@@ -116,7 +116,11 @@
       </div>
 
       <!-- Match your file name EXACTLY. You uploaded “Hero image.png” -->
-      <img src="Hero%20image.png" alt="E-book cover">
+    <!-- HERO IMAGE -->
+<img src="Hero image.png" alt="THRIVE 360 hero"
+     class="hero-img"
+     style="max-height:180px;width:100%;height:auto;object-fit:contain;display:block;margin:18px auto;border-radius:16px;border:1px solid #2a2f40;">
+
     </div>
 
     <footer>© <span id="y"></span> THRIVE 360 • <a href="#">Instagram</a></footer>
