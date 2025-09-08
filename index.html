@@ -2,142 +2,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page - Upcoming E‑book</title
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #f3f4f6, #e8eaf6);
-            color: #333;
-            line-height: 1.6;
-        }
-        .hero {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #a2d2ff, #d3c7ff);
-        }
-        .hero img {
-            max-width: 350px;
-            height: auto;
-            margin: 20px;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        .hero-content {
-            max-width: 500px;
-            margin: 20px;
-            text-align: center;
-        }
-        .hero-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: #1d3b53;
-        }
-        .hero-content p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
-        .hero-content form {
-            display: flex;
-            justify-content: center;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        .hero-content input[type="email"] {
-            padding: 10px;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px 0 0 4px;
-            flex: 1;
-        }
-        .hero-content button {
-            padding: 10px 20px;
-            font-size: 1rem;
-            border: none;
-            background: #5b21b6;
-            color: #fff;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
-        }
-        .section {
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #1d3b53;
-            text-align: center;
-        }
-        .section ul {
-            list-style: none;
-            padding: 0;
-        }
-        .section li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
-        .section li::before {
-            content: "✔";
-            position: absolute;
-            left: 0;
-            color: #5b21b6;
-            font-weight: bold;
-        }
-        footer {
-            background: #f0f2f5;
-            padding: 20px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #555;
-        }
-        footer a {
-            color: #5b21b6;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>THRIVE 360 — Join the Waitlist</title>
+  <style>
+    :root { --bg:#ffffff; --ink:#0f172a; --muted:#475569; --brand:#5b21b6; }
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    .hero{display:grid;gap:24px;align-items:center;grid-template-columns:1fr; padding:32px 0}
+    @media(min-width:900px){.hero{grid-template-columns:1.1fr .9fr}}
+    .hero img{width:100%;height:auto;border-radius:16px;box-shadow:0 12px 30px rgba(2,8,23,.1)}
+    h1{font-size:clamp(28px,4vw,48px);line-height:1.1;margin:0 0 12px}
+    p.lead{font-size:clamp(16px,2.2vw,20px);color:var(--muted);margin:0 0 16px}
+    form{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+    input[type=email]{flex:1;min-width:240px;padding:14px 16px;border:1px solid #e5e7eb;border-radius:12px;font-size:16px}
+    button{padding:14px 18px;border:0;border-radius:12px;background:var(--brand);color:#fff;font-weight:600;cursor:pointer}
+    .grid{display:grid;gap:18px;grid-template-columns:1fr; margin-top:24px}
+    @media(min-width:800px){.grid{grid-template-columns:repeat(3,1fr)}}
+    .card{padding:18px;border:1px solid #e5e7eb;border-radius:14px;background:#fff}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:15px}
+    footer{margin:36px 0 12px;color:#64748b;font-size:14px;text-align:center}
+    a{color:var(--brand);text-decoration:none}
+  </style>
 </head>
 <body>
+  <div class="wrap">
     <div class="hero">
-        <img src="Hero%20image.png" alt="E‑book cover">
-        <div class="hero-content">
-            <h1>THRIVE 360</h1>
-            <p>Because thriving is about more than food — it’s about living fully.</p>
-            <form action="#" method="GET">
-                <input type="email" name="email" placeholder="Enter your email" required>
-                <button type="submit">Join the Waitlist</button>
-            </form>
+      <div>
+        <h1>THRIVE 360</h1>
+        <p class="lead">Because thriving is about more than food — it’s about living fully.</p>
+
+        <!-- Simple “mailto” signup for now; replace later with your email service -->
+        <form action="mailto:your@email.com?subject=THRIVE%20360%20Waitlist" method="GET">
+          <input type="email" name="email" placeholder="Enter your email" required />
+          <button type="submit">Join the Waitlist</button>
+        </form>
+
+        <div class="grid">
+          <div class="card"><h3>Mind & Habits</h3><p>Build small, sustainable routines that compound into big change.</p></div>
+          <div class="card"><h3>Balanced Nutrition</h3><p>Simple, flexible frameworks to eat well without obsession.</p></div>
+          <div class="card"><h3>Real-Life Friendly</h3><p>Tools that work with busy schedules, cravings, and social life.</p></div>
         </div>
+      </div>
+
+      <!-- Match your file name EXACTLY. You uploaded “Hero image.png” -->
+      <img src="Hero%20image.png" alt="E-book cover">
     </div>
-    <div class="section">
-        <h2>What You'll Learn</h2>
-        <ul>
-            <li>Identify your niche and create content tailored for your ideal reader【233325264416643†L454-L461】.</li>
-            <li>Design a compelling content calendar to maintain consistency and engagement【215683694106912†L691-L701】.</li>
-            <li>Leverage short‑form videos (Reels or TikTok) to share quick insights and reach new audiences【548695335850120†L106-L114】.</li>
-            <li>Use social media collaboration and partnerships to expand your reach【233325264416643†L543-L550】.</li>
-            <li>Build an email list and nurture your subscribers with value‑packed content【548695335850120†L95-L104】.</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Why Join Us?</h2>
-        <ul>
-            <li>Access exclusive tips, resources and behind‑the‑scenes stories before anyone else【548695335850120†L149-L154】.</li>
-            <li>Be part of a supportive community of learners and creators【233325264416643†L530-L540】.</li>
-            <li>Stay ahead of the curve with the latest social media trends and strategies【215683694106912†L774-L799】.</li>
-        </ul>
-    </div>
-    <footer>
-        <p>For more information about our upcoming e‑book and marketing strategies, check out our blog and social media channels.</p>
-        <p>Copyright © 2025 Your Brand. All rights reserved.</p>
-    </footer>
+
+    <footer>© <span id="y"></span> THRIVE 360 • <a href="#">Instagram</a></footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
